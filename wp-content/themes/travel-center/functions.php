@@ -105,7 +105,7 @@ add_action( 'widgets_init', 'travel_center_widgets_init' );
  * Enqueue scripts and styles.
  */
 function travel_center_scripts() {
-	wp_enqueue_style( 'travel-center-style', get_stylesheet_uri() );
+/*	wp_enqueue_style( 'travel-center-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'travel-center-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -113,7 +113,7 @@ function travel_center_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
+	}*/
 }
 add_action( 'wp_enqueue_scripts', 'travel_center_scripts' );
 
@@ -141,3 +141,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * customization 4/14/2017
+ */
+

@@ -108,11 +108,11 @@
 			if ($(window).scrollTop() > sticky_point) {  
 				$("#header-sticky").slideDown(300).addClass("header-sticky");
 				$("#header .menu ul, #header .menu .megamenu-container").css({"visibility": "hidden"});
-				$("#header-sticky #logo img").attr("src", "assets/images/logo-small.png");
+				$("#header-sticky #logo img").attr("src", "http://dev.eg.travelcenter.kz/wp-content/themes/travel-center/assets/images/logo-small.png");
 			} else {
 				$("#header-sticky").slideUp(100).removeClass("header-sticky");
 				$("#header .menu ul, #header .menu .megamenu-container").css({"visibility": "visible"});
-				$("#header-sticky #logo img").attr("src", "assets/images/logo.png");
+				$("#header-sticky #logo img").attr("src", "http://dev.eg.travelcenter.kz/wp-content/themes/travel-center/assets/images/logo-eg.png");
 			}
 			
 		});
@@ -155,9 +155,9 @@
 	function change_logo() {
 		
 		if ($(window).width() < 992) {
-			$("#header #logo img").attr("src", "assets/images/logo-small.png");
+			$("#header #logo img").attr("src", "http://dev.eg.travelcenter.kz/wp-content/themes/travel-center/assets/images/logo-small.png");
 		} else {
-			$("#header #logo img").attr("src", "assets/images/logo.png");
+			$("#header #logo img").attr("src", "http://dev.eg.travelcenter.kz/wp-content/themes/travel-center/assets/images/logo-eg.png");
 		}
 		
 	}

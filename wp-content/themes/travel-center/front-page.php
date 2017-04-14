@@ -10,49 +10,11 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <title>The Supreme - Hotel HTML5 Template</title>
+    <title><?php the_title()?></title>
 
-    <!-- FAVICON AND APPLE TOUCH -->
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="apple-touch-180x180.png">
-    <meta name="msapplication-TileImage" content="mstile.png">
 
-    <!-- FONTS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prata&amp;subset=cyrillic">
 
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/bootstrap/css/bootstrap.min.css">
-
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/fonts/fontawesome/css/font-awesome.min.css">
-
-    <!-- SUPREME ICONS -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/fonts/supreme-icons/css/supreme-icons.min.css">
-
-    <!-- FANCYBOX -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/fancybox/jquery.fancybox.css">
-
-    <!-- REVOLUTION SLIDER -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/revolutionslider/css/settings.css">
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/revolutionslider/css/layers.css">
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/revolutionslider/css/navigation.css">
-
-    <!-- OWL Carousel -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/owl-carousel/owl.carousel.css">
-
-    <!-- YOUTUBE PLAYER -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/ytplayer/css/jquery.mb.ytplayer.min.css">
-
-    <!-- ANIMATIONS -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/animations/animate.min.css">
-
-    <!-- BEATPICKER -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/plugins/beatpicker/beatpicker.min.css">
-
-    <!-- CUSTOM & PAGES STYLE -->
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/css/custom.css">
-    <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/css/pages-style.css">
+    <?php get_template_part('inc/load', 'styles')?>
 
 
 </head>
@@ -78,7 +40,7 @@
                             <ul>
                                 <li>
                                     <i class="supreme-icon-big-map-placeholder-outlined-symbol-of-interface"></i>
-                                    4124 Barnes Street, Sanford, FL 32771
+                                    Казахстан, Алматы 050002 пр.Абылай хана, д.92/ 87
                                 </li>
                             </ul>
 
@@ -92,7 +54,7 @@
                             <ul>
                                 <li class="text-right">
                                     <i class="supreme-icon-phone-auricular-outline"></i>
-                                    407-322-2171
+                                    <a href="tel:+77022140694">+7 (702) 214-06-94</a>
                                 </li>
                             </ul>
 
@@ -136,54 +98,19 @@
 
                                 $args = array(
                                     'menu' => 2,
-                                    'before' => '<li class="active">',
+                                    'before' => '<li>',
                                     'after' => '</li>'
                                 );
+
+
+
+
                                 ?>
+
 
                                 <?php wp_nav_menu($args)?>
 
 
-                                <!--<li class="dropdown">
-                                    <a href="#">Gallery</a>
-                                    <ul>
-                                        <li class="dropdown">
-                                            <a href="#">Gallery Pagination</a>
-                                            <ul>
-                                                <li><a href="gallery-pagination-no-gutter.html">3 cols - no gutter</a></li>
-                                                <li><a href="gallery-pagination-gutter.html">3 cols - gutter</a></li>
-                                                <li><a href="gallery-pagination-titles.html">3 cols - titles</a></li>
-                                                <li><a href="gallery-pagination-gutter-titles.html">3 cols - gutter &amp; titles</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#">Gallery Filter</a>
-                                            <ul>
-                                                <li><a href="gallery-filter-no-gutter.html">3 cols - no gutter</a></li>
-                                                <li><a href="gallery-filter-gutter.html">3 cols - gutter</a></li>
-                                                <li><a href="gallery-filter-titles.html">3 cols - titles</a></li>
-                                                <li><a href="gallery-filter-gutter-titles.html">3 cols - gutter &amp; titles</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#">Gallery Fullwidth</a>
-                                            <ul>
-                                                <li><a href="gallery-fullwidth-no-gutter.html">4 cols - no gutter</a></li>
-                                                <li><a href="gallery-fullwidth-gutter.html">4 cols - gutter</a></li>
-                                                <li><a href="gallery-fullwidth-titles.html">4 cols - titles</a></li>
-                                                <li><a href="gallery-fullwidth-gutter-titles.html">4 cols - gutter &amp; titles</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#">Gallery Masonry</a>
-                                            <ul>
-                                                <li><a href="gallery-masonry.html">Masonry</a></li>
-                                                <li><a href="gallery-fitrows.html">Fit Rows</a></li>
-                                                <li><a href="gallery-fitcolumns.html">Fit Columns</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>-->
                             </ul>
 
                         </nav>
@@ -194,7 +121,7 @@
                         <!-- LOGO -->
                         <div id="logo">
                             <a href="index.html">
-                                <img src="assets/images/logo.png" alt="">
+                                <img src="<?php echo get_template_directory_uri()?>/assets/images/logo-eg.png" alt="">
                             </a>
                         </div><!-- LOGO -->
 
@@ -205,24 +132,9 @@
                         <nav>
 
                             <ul class="menu clearfix" id="menu-right">
-                                <li class="dropdown">
-                                    <a href="#">News</a>
-                                    <ul>
-                                        <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
-                                        <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
-                                        <li><a href="news-no-sidebar.html">News No Sidebar</a></li>
-                                        <li class="dropdown">
-                                            <a href="#">Single News</a>
-                                            <ul>
-                                                <li><a href="news-single-right-sidebar.html">Single News Right Sidebar</a></li>
-                                                <li><a href="news-single-left-sidebar.html">Single News Left Sidebar</a></li>
-                                                <li><a href="news-single-no-sidebar.html">Single News No Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="offers.html">Offers</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                               
+                                <li><a href="offers.html">VIP предложения</a></li>
+                                <li><a href="contact.html">Контакты</a></li>
                                 <li class="search">
 
                                     <a href="#"><i class="supreme-icon-search-interface-symbol"></i></a>
@@ -258,7 +170,7 @@
                 <ul>
                     <li data-transition="fade">
 
-                        <img src="images/index/revolution-slider/bg-slide-1.jpg" alt="">
+                        <img src="http://dev.eg.travelcenter.kz/wp-content/uploads/2017/04/bg-slide-1-1.jpg" alt="">
 
                         <div class="tp-caption overlay"
                              data-x="center"
@@ -276,7 +188,7 @@
                              data-start="1200"
                              data-transform_in="o:0;s:700;"
                              data-transform_out="o:0;s:700;">
-                            Luxury by the sea
+                            Four Seasons George V
                         </div>
 
                         <div class="tp-caption text"
@@ -287,7 +199,7 @@
                              data-start="1700"
                              data-transform_in="y:-50;s:700;"
                              data-transform_out="y:-50;s:700;">
-                            Regular Suite From $99 / Night
+                            Расположенный в двух шагах от Елисейских Полей
                         </div>
 
                         <div class="tp-caption subtitle"
@@ -298,7 +210,7 @@
                              data-start="2200"
                              data-transform_in="y:50;s:700;"
                              data-transform_out="y:50;s:700;">
-                            Speciall Offer
+                            новое определение роскоши
                         </div>
 
                         <div class="tp-caption link"
@@ -309,7 +221,7 @@
                              data-start="2700"
                              data-transform_in="y:50;s:700;"
                              data-transform_out="y:50;s:700;">
-                            <a href="#">Take a look <i class="supreme-icon-arrow-right"></i></a>
+                            <a href="#">Забронировать <i class="supreme-icon-arrow-right"></i></a>
                         </div>
 
                     </li>
@@ -372,7 +284,7 @@
                     </li>
                     <li data-transition="fade">
 
-                        <img src="images/index/revolution-slider/bg-slide-3.jpg" alt="">
+                        <img src="http://dev.eg.travelcenter.kz/wp-content/uploads/2017/04/bg-slide-3.jpg" alt="">
 
                         <div class="tp-caption"
                              data-x="center"
@@ -381,7 +293,7 @@
                              data-start="700"
                              data-transform_in="o:0;s:700;"
                              data-transform_out="o:0;s:700;">
-                            <img src="images/index/revolution-slider/slide-3-image-1.png" alt="">
+                            <img src="http://dev.eg.travelcenter.kz/wp-content/uploads/2017/04/slide-3-image-1.png" alt="">
                         </div>
 
                         <div class="tp-caption big-title"
@@ -866,134 +778,8 @@
     </div><!-- PAGE CONTENT -->
 
 
-    <!-- FOOTER -->
-    <footer>
+<?php get_template_part('template-parts/content', 'footer')?>
 
-        <div id="footer">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3">
-
-                        <div class="widget widget-weather">
-
-                            <h5 class="widget-title">Weather</h5>
-
-                            <div class="weather">
-                                <img src="#" class="weather-icon" alt="">
-                                <span class="weather-temperature"></span>
-                                <span class="weather-place"></span>
-                            </div><!-- weather -->
-
-                        </div><!-- widget-weather -->
-
-                    </div><!-- col -->
-                    <div class="col-sm-3">
-
-                        <div class="widget widget-twitter">
-
-                            <h5 class="widget-title">Connect with us</h5>
-
-                            <div class="tweets-list" data-items="1" data-account-id="717603984983371776"></div>
-
-                        </div><!-- widget-twitter -->
-
-                    </div><!-- col -->
-                    <div class="col-sm-3">
-
-                        <div class="widget widget-contact">
-
-                            <h5 class="widget-title">Contact Info</h5>
-
-                            <ul>
-                                <li>
-                                    <i class="supreme-icon-big-map-placeholder-outlined-symbol-of-interface"></i>
-                                    4124 Barnes Street, Sanford, FL 32771
-                                </li>
-                                <li>
-                                    <i class="supreme-icon-phone-auricular-outline"></i>
-                                    407-322-2171
-                                </li>
-                                <li>
-                                    <i class="supreme-icon-email-closed-outlined-back-envelope-interface-symbol"></i>
-                                    <a href="mailto:office@thesupreme.com">office@thesupreme.com</a>
-                                </li>
-                            </ul>
-
-                        </div><!-- widget-contact -->
-
-                    </div><!-- col -->
-                    <div class="col-sm-3">
-
-                        <div class="widget widget-newsletter">
-
-                            <h5 class="widget-title">Newsletter</h5>
-
-                            <form name="newsletter" method="post" action="#">
-                                <fieldset>
-                                    <input id="newsletter-email" type="email" name="email" placeholder="E-mail">
-                                    <button type="submit" name="submit" value=""><i class="supreme-icon-arrow-right"></i></button>
-                                </fieldset>
-                            </form>
-
-                        </div><!-- widget-newsletter -->
-
-                        <div class="widget widget-social">
-
-                            <div class="social-media">
-
-                                <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
-                                <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                                <a class="instagram" href="#"><i class="fa fa-instagram"></i></a>
-                                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-                                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-
-                            </div><!-- social-media -->
-
-                        </div><!-- widget-social -->
-
-                    </div><!-- col -->
-                </div><!-- row -->
-            </div><!-- container -->
-
-        </div><!-- FOOTER -->
-
-        <div id="footer-bottom">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-
-                        <div class="widget widget-text">
-
-                            <div>
-
-                                <h6>&copy; 2016 <span class="text-default-color">The Supreme Hotel.</span> All Rights Reserved</h6>
-
-                            </div>
-
-                        </div><!-- widget-text -->
-
-                    </div><!-- col -->
-                    <div class="col-sm-6">
-
-                        <div class="widget widget-pages">
-
-                            <ul>
-                                <li><a href="#">Accomodation</a></li>
-                                <li><a href="#">Book Now</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                            </ul>
-
-                        </div><!-- widget-pages -->
-
-                    </div><!-- col -->
-                </div><!-- row -->
-            </div><!-- container -->
-
-        </div><!-- FOOTER BOTTOM -->
-
-    </footer><!-- FOOTER -->
 
 </div><!-- MAIN CONTAINER -->
 
