@@ -163,38 +163,36 @@ while ($q->have_posts()): $q->the_post();
 <section class="pt-2 pb-2 elegant-color">
     <div class="container">
 
-        <div class="row">
+        <div class="row visible-sm">
         <?php
         $args = array(
-            'post_type' => 'front_page_banner_m',
-            'posts_per_page' => 3
+            'post_type' => 'front_page_banner_m'
 
 
 
         );
 
         $q = new WP_Query($args);
-        $count = (int)wp_count_posts('front_page_banner_m')->publish;
 
         while ($q->have_posts()): $q->the_post();
 
 
         ?>
 
-            <div class="col-md-4">
+            <div class="col-xs-12 col-md-4 col-lg-4 mt-1">
                 <!--Card-->
                 <div class="card">
 
                     <!--Card image-->
-                    <img class="img-fluid overlay hm-white-slight" src="<?php echo get_field('m_banner_image')['url']?>" alt="Card image cap">
+                    <img class="img-fluid overlay hm-white-slight" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full')?>" alt="Card image cap">
                     <!--/.Card image-->
 
                     <!--Card content-->
                     <div class="card-block">
                         <!--Title-->
-                        <h4 class="card-title"><?php echo get_field('m_hotel_name')?></h4>
+                        <h4 class="card-title"><?php echo get_the_title(get_the_ID())?></h4>
                         <!--Text-->
-                        <p class="card-text">london</p>
+                        <p class="card-text"><?php echo get_post(get_the_ID())->post_content?></p>
                         <a href="<?php echo get_field('m_cta_url')?>" class="btn btn-elegant"><?php echo get_field('m_cta_text')?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                     <!--/.Card content-->

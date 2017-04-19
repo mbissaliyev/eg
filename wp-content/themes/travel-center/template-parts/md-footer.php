@@ -1,6 +1,6 @@
 
 <!--Footer-->
-<footer class="page-footer center-on-small-only pt-4">
+<footer class="page-footer center-on-small-only pt-4 wow fadeInUp">
 
     <!--Footer Links-->
     <div class="container-fluid">
@@ -26,12 +26,10 @@
 
             <!--Second column-->
             <div class="col-lg-2 col-md-4 offset-lg-1">
-                <h5 class="title">First column</h5>
+                <h5 class="title">Направления</h5>
                 <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
+                    <li><a href="http://dev.eg.travelcenter.kz/destinations/london">Лондон</a></li>
+                    <li><a href="http://dev.eg.travelcenter.kz/destinations/paris">Париж</a></li>
                 </ul>
             </div>
             <!--/.Second column-->
@@ -57,9 +55,9 @@
             <!--Fourth column-->
             <div class="col-lg-2 col-md-4">
                 <h5 class="">Рассылка</h5>
-                <form>
-                    <input type="email" placeholder="Введите email">
-                </form>
+                <div class="md-form">
+                    <input type="email" id="form1" class="form-control">
+                </div>
 
             </div>
             <!--/.Fourth column-->

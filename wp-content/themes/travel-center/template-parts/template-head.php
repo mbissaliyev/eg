@@ -8,3 +8,4 @@
 <link href="<?php echo get_template_directory_uri()?>/assets/md/css/mdb.min.css" rel="stylesheet">
 
 <link href="<?php echo get_template_directory_uri()?>/assets/md/css/style.css" rel="stylesheet">
+

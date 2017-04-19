@@ -28,6 +28,8 @@
 
 
 
+
+
 <section class="d-flex p-5 ">
     <div class="container">
         <div class="row">
@@ -41,7 +43,7 @@
                     <?php $currency = get_field('currency_dest');
                     foreach ($currency as $c):
                         ?>
-                        <span class="badge badge-default"><i class="fa fa-<?php echo $c?>"></i> <?php echo $c?></span>
+                        <span class="badge badge-default"><i class="fa fa-<?php echo $c?> fa-lg"></i> <?php echo $c?></span>
                     <?php endforeach;?>
 
 
@@ -56,7 +58,7 @@
                     <?php $airports = get_field('airports_dest');
                     foreach ($airports as $a):
                         ?>
-                        <span class="badge badge-default"><i class="fa fa-plane"></i> <?php echo $a->post_title?> (<?php echo get_field('airport_code', $a->ID)?>)</span>
+                        <span class="badge badge-default"><i class="fa fa-plane fa-lg"></i> <?php echo $a->post_title?> (<?php echo get_field('airport_code', $a->ID)?>)</span>
                     <?php endforeach;?>
 
 
@@ -77,14 +79,62 @@
 
                 </p>
             </div>
+        </div>
+
+        <div class="col-md-6 text-right">
+            <p>Погода: <span id="weather"></span></p>
+        </div>
+    </div>
+</section>
 
 
+<?php if (get_field('dest_events')):?>
+<section class="p-5">
+    <div class="container">
 
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <h2 class="text-center">События</h2>
+            </div>
+        </div>
+        <div class="row">
+            <?php
+            $events = get_field('dest_events');
+            $animation = array('fadeInLeft', 'fadeInRight', 'fadeInLeft', 'fadeInRight');
+            $count = 0;
+            foreach ($events as $e):
+            ?>
+            <div class="col-md-3">
+                <!--Card-->
+                <div class="card wow <?php echo $animation[$count]?>">
 
+                    <!--Card image-->
+                    <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($e, 'full')?>" alt="Card image cap">
+                    <!--/.Card image-->
+
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Title-->
+                        <h4 class="card-title text-center"><?php echo get_the_title($e)?></h4>
+                        <?php if (get_field('event_period',$e)):?>
+                        <p class="text-center text-muted"><small><strong><?php echo get_field('event_period',$e)?></strong></small></p>
+                        <?php endif;?>
+                    <!--Text-->
+                        <p class="card-text text-center"><?php echo get_post($e)->post_content?></p>
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+            </div>
+                <?php $count++;endforeach; ?>
+
+        </div>
 
         </div>
     </div>
 </section>
+<?php endif;?>
 
 
 <section class="d=flex pt-5 pb-1 elegant-color">
@@ -93,19 +143,11 @@
             <div class="col-md-12">
 
                 <!--Card-->
-                <div class="card">
+                <div class="card wow fadeInLeft">
 
                     <!--Card image-->
-                    <div class="view overlay hm-white-slight">
-                        <?php
-                        $id = get_field('promo_hotel_dest_1')[0]->ID;
-                        ?>
-                        <img src="<?php echo get_the_post_thumbnail_url($id,'full')?>" class="img-fluid" alt="">
-                        <a href="#">
-                            <div class="mask waves-effect waves-light"></div>
-                        </a>
-                    </div>
-                    <!--/.Card image-->
+                    <img class="img-fluid overlay hm-white-slight" src="<?php echo get_the_post_thumbnail_url($id,'full')?>" alt="Card image cap">
+
 
                     <!--Card content-->
                     <div class="card-block">
@@ -136,10 +178,10 @@
             $features = get_field('hotel_1_feature_1');
             foreach ($features as $f):
             ?>
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-4 mt-1">
 
                     <!--Card-->
-                    <div class="card">
+                    <div class="card wow fadeInUp" data-wow-delay="0.3s">
 
                         <!--Card image-->
                         <img class="img-fluid overlay hm-white-slight" src="<?php echo get_the_post_thumbnail_url($f, 'full')?>" alt="Card image cap">
@@ -175,6 +217,8 @@
 
 
 
+
+
 <?php get_template_part('template-parts/md','footer')?>
 
 
@@ -192,8 +236,28 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="<?php echo get_template_directory_uri()?>/assets/md/js/mdb.min.js"></script>
 
+<script type="text/javascript" src="<?php echo get_template_directory_uri()?>/assets/md/js/jquery.simpleWeather.js"></script>
 <script>
     new WOW().init();
+</script>
+
+<script>
+    // Docs at http://simpleweatherjs.com
+    $(document).ready(function() {
+        $.simpleWeather({
+            location: '<?php echo the_title()?>',
+            woeid: '',
+            unit: 'c',
+            success: function(weather) {
+                html = '<div class="badge badge-default">'+weather.temp+'&deg;'+weather.units.temp+'</div>';
+
+                $("#weather").html(html);
+            },
+            error: function(error) {
+                $("#weather").html('<p>'+error+'</p>');
+            }
+        });
+    });
 
 </script>
 
