@@ -38,3 +38,4 @@
 <!-- CUSTOM & PAGES STYLE -->
 <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/css/custom.css">
 <link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/css/pages-style.css">
+<link rel="stylesheet" href="<?php  echo get_template_directory_uri()?>/assets/css/tc.css">

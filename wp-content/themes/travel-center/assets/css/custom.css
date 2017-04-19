@@ -1966,6 +1966,8 @@
 		padding-bottom: 70px;
 		margin-bottom: -50px;
 		background-image: url(../../images/backgrounds/bg-3.jpg);
+		height: 100%;
+		width: 100%;
 	}
 	
 	@media (min-width: 1200px) {

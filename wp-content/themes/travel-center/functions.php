@@ -147,3 +147,10 @@ require get_template_directory() . '/inc/jetpack.php';
  * customization 4/14/2017
  */
 
+function remove_footer_admin () {
+
+    echo 'Разработка K-Tech Labs для TOO "Travel Center"<br>Support: Marlen Bissaliyev <a href="mailto:marlen@smart-card.kz">marlen@smart-card.kz</a> <a href="tel:+77015539459">+7 701 5539 459</a></p>';
+
+}
+
+add_filter('admin_footer_text', 'remove_footer_admin');

@@ -40,11 +40,12 @@
                         <ul>
                             <li>
                                 <i class="supreme-icon-big-map-placeholder-outlined-symbol-of-interface"></i>
-                                4124 Barnes Street, Sanford, FL 32771
+                                Казахстан, Алматы 050002 пр.Абылай хана, д.92/ 87
                             </li>
                             <li>
                                 <i class="supreme-icon-phone-auricular-outline"></i>
-                                407-322-2171
+                                +7 (702) 214-06-94
+
                             </li>
                             <li>
                                 <i class="supreme-icon-email-closed-outlined-back-envelope-interface-symbol"></i>

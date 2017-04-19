@@ -1,0 +1,283 @@
+/*
+custom style for tc
+ */
+
+.mb0
+{
+    margin-bottom: 0px !important;
+}
+
+.isotope-item.item-width-front-1 {
+    width: 100%;
+}
+
+.isotope-item.item-width-front-2 {
+    width: 50%;
+}
+
+
+.isotope-item.item-width-front-3 {
+    width: 24.9999%;
+}
+
+.isotope-item.item-width-front-4 {
+    width: 49.9999%;
+}
+
+
+.hotel-action {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color:#fff;
+    font-size: 1.21em;
+    text-align: center;
+}
+
+.hotel-action:hover {
+
+    text-decoration: none;
+}
+
+
+.hotel-action-cta {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color:#fff;
+    text-align: center;
+}
+
+
+.hotel-action-cta-m {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color:#fff;
+    text-align: center;
+}
+
+
+.hotel-action-cta-m:hover {
+
+    text-decoration: none;
+}
+
+.logo-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    display: block;
+    margin-left: -53px;
+    height: 130px;
+    background: #fff;
+    padding: 5px 5px 5px 5px;
+}
+
+.img-logo-container
+{
+    margin-top:25%;
+}
+
+.portfolio-item-thumbnail-quote
+{
+}
+
+
+.padding-block
+{
+    padding-bottom: 150px;
+    background-color:#292828;
+    margin-bottom: 20px;
+}
+
+.city-headline-title
+{
+    padding-top: 70px;
+
+}
+
+h2.city-headline
+{
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+p.city-text
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    color:#b8b8b8;
+}
+
+
+/* WIDGET WEATHER */
+.widget-weather-destination {}
+
+.weather-destination {
+    font-family: "Prata", serif;
+    font-size: 14px;
+}
+
+.weather-icon-destination {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.weather-temperature-destination {
+    position: relative;
+    margin-right: 10px;
+    font-size: 42px;
+}
+
+.weather-temperature-destination > span {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    color: #9f8c5f;
+    font-size: 14px;
+}
+
+.weather-temperature-destination > small {
+    position: relative;
+    top: -17px;
+    margin-left: 5px;
+    font-size: 24px;
+}
+
+
+@media (min-width: 1200px) {
+
+    .weather-icon-destination {
+        float: left;
+        margin-top: -20px;
+        margin-right: 10px;
+    }
+
+}
+
+.hotel-container
+{
+    position: static;
+    background-color: #393838;
+    width: 80%;
+}
+
+.hotel-booking
+{
+    position: absolute;
+    top:20%;
+    left:10%;
+    width: 30%;
+    height: 430px;
+    background-color:white;
+
+}
+
+.hotel-booking p
+{
+
+}
+
+
+
+.hotel-booking-cta
+{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    background-color:#393838;
+    height: 25%;
+
+
+}
+
+
+.hotel-booking-cta p
+{
+
+   text-align: center;
+    vertical-align: middle;
+    top: 50%;
+    color: white;
+    font-size: 1.12em;
+    margin-top:10%;
+
+
+}
+
+
+.img-hotel-container
+{
+    bottom:10%;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.pl0
+{
+    padding-left: 0px;
+}
+
+
+.hotel-booking-name > .hotel-title
+{
+    font-size: 20px;
+    padding-left: 25%;
+    padding-top: 25%;
+    font-weight: 400;
+}
+
+
+.right-section
+{
+    margin-top:16px;
+}
+
+
+
+.right-section h2
+{
+    color:white;
+    margin-bottom: 2%;
+    margin-top:2%;
+    font-family: "Roboto";
+}
+
+
+.right-section p
+{
+    color:white;
+    color:#9c9b9b;
+    margin-bottom: 10px;
+
+}
+
+
+.right-section a
+{
+    color:white;
+    font-weight: 400;
+}

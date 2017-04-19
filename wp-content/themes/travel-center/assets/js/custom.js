@@ -336,7 +336,7 @@
 			$(".rev_slider").revolution({
 				sliderType: "standard",
 				sliderLayout: "auto",
-				delay: 9000,
+				delay: 5000,
 				navigation: {
 					arrows:{
 						style: "custom",
@@ -836,14 +836,38 @@
 			
 			$('.weather-temperature').openWeather({
 				key: 'c9d49310f8023ee2617a7634de23c2aa',
-				city: 'Florida',
+				city: 'Almaty',
 				units: 'c',
 				placeTarget: '.weather-place',
 				iconTarget: '.weather-icon',
-				customIcons: 'assets/plugins/weather/icons/'
+				customIcons: 'http://dev.eg.travelcenter.kz/wp-content/themes/travel-center/assets/plugins/weather/icons/'
 			});
 			
 		}
+
+
+
+        function myFunction() {
+            var x = document.getElementsByClassName("weather-place-destination")[0].innerHTML;
+            return x;
+
+        }
+
+        // WEATHER DESTINATION//
+        if (typeof $.fn.openWeather !== 'undefined') {
+
+            $('.weather-temperature-destination').openWeather({
+                key: 'c9d49310f8023ee2617a7634de23c2aa',
+                city: myFunction(),
+                units: 'c',
+                placeTarget: '.weather-place-destination',
+                iconTarget: '.weather-icon-destination',
+                customIcons: 'http://dev.eg.travelcenter.kz/wp-content/themes/travel-center/assets/plugins/weather/icons/'
+            });
+
+        }
+
+
 		
 		
 		// TWITTER //
