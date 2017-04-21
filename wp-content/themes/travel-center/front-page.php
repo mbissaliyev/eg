@@ -14,7 +14,6 @@
     <ol class="carousel-indicators">
         <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-3" data-slide-to="1"></li>
-        <li data-target="#carousel-example-3" data-slide-to="2"></li>
     </ol>
     <!--/.Indicators-->
 
@@ -36,7 +35,7 @@
     <div class="carousel-inner" role="listbox">
 
         <!-- First slide -->
-        <div class="carousel-item <?php if (get_field('order') == 1) : echo 'active';endif;?> view hm-black-light" style="background-image: url('<?php echo get_field('promo_banner')?>'); background-repeat: no-repeat; background-size: cover;">
+        <div class="carousel-item <?php if (get_field('order') == 1) : echo 'active';endif;?> view hm-stylish-light" style="background-image: url('<?php echo get_field('promo_banner')?>'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Caption -->
             <div class="full-bg-img flex-center white-text">
@@ -51,7 +50,7 @@
                         <p class="flex-item"><?php echo get_field('bottom_subtitle');?></p>
                     </li>
                     <li>
-                        <a target="_blank" href="<?php echo get_field('cta_url')?>" class="btn btn-lime btn-lg flex-item" rel="nofollow"><?php echo get_field('promo_cta')?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a target="" href="<?php echo get_field('cta_url')?>" class="btn btn-lime btn-lg flex-item" rel="nofollow"><?php echo get_field('promo_cta')?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </div>
@@ -85,13 +84,16 @@
 
 <!--Section: Features v.1-->
 
-<section class="section feature-box mt-2 mb-2 ">
+<section class="d-flex mt-2 mb-2">
     <div class="container ">
         <!--Section heading-->
-        <h1 class="h2-responsive text-center" style="color:#212121">Executive Guest | by Travel Center</h1>
+        <div class="col-12">
+        <h1 class="h1-responsive text-center" style="color:#212121">Executive Guest | by Travel Center</h1>
         <!--Section sescription-->
-        <h3 class="h3-responsive">Для Вас мы отобрали только самых лучших поставщиков индустрий, чтобы Ваш отдых был незабываемым!</h3>
-
+        </div>
+        <div class="col-12">
+            <h3 class="h3-responsive">Для Вас мы отобрали только самых лучших поставщиков индустрий, чтобы Ваш отдых был незабываемым!</h3>
+        </div>
     </div>
 
 </section>
@@ -139,6 +141,7 @@ while ($q->have_posts()): $q->the_post();
                                 <!--Title-->
                                 <h4 class="card-title"><?php echo get_field('xl_hotel_name')?></h4>
                                 <!--Text-->
+                                <p class="card-text"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> <span class="badge badge-primary"><?php echo get_field('xl_city_country')?></span></p>
                                 <p class="card-text"><?php echo get_field('xl_hotel_short_description')?></p>
                                 <a href="<?php echo get_field('xl_cta_url')?>" class="btn btn-elegant"><?php echo get_field('xl_cta')?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </div>
@@ -191,6 +194,9 @@ while ($q->have_posts()): $q->the_post();
                     <div class="card-block">
                         <!--Title-->
                         <h4 class="card-title"><?php echo get_the_title(get_the_ID())?></h4>
+
+                        <p class="card-text"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> <span class="badge badge-primary"><?php echo get_field('m_city_country')?></span></p>
+
                         <!--Text-->
                         <p class="card-text"><?php echo get_post(get_the_ID())->post_content?></p>
                         <a href="<?php echo get_field('m_cta_url')?>" class="btn btn-elegant"><?php echo get_field('m_cta_text')?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>

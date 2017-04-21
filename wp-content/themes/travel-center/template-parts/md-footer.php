@@ -30,6 +30,7 @@
                 <ul>
                     <li><a href="http://dev.eg.travelcenter.kz/destinations/london">Лондон</a></li>
                     <li><a href="http://dev.eg.travelcenter.kz/destinations/paris">Париж</a></li>
+                    <li><a href="http://dev.eg.travelcenter.kz/destinations/san-cassiano">Сан Кассиано</a></li>
                 </ul>
             </div>
             <!--/.Second column-->
@@ -72,7 +73,7 @@
     <!--Copyright-->
     <div class="footer-copyright">
         <div class="container-fluid">
-            © <?php echo date('Y',time())?> Все права зашищены. <a href="#"> TRAVEL CENTER TOO </a>
+            © <?php echo date('Y',time())?> <a href="#"> TRAVEL CENTER TOO </a>
 
         </div>
     </div>

@@ -9,7 +9,7 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarNav1">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item active-nav">
                     <a class="nav-link">Главная <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
