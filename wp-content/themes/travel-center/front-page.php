@@ -35,17 +35,19 @@
     <div class="carousel-inner" role="listbox">
 
         <!-- First slide -->
-        <div class="carousel-item <?php if (get_field('order') == 1) : echo 'active';endif;?> view hm-stylish-light" style="background-image: url('<?php echo get_field('promo_banner')?>'); background-repeat: no-repeat; background-size: cover;">
+        <div class="carousel-item <?php if (get_field('order') == 1) : echo 'active';endif;?> view" style="background-image: url('<?php echo get_field('promo_banner')?>'); background-repeat: no-repeat; background-size: cover;">
 
             <!-- Caption -->
             <div class="full-bg-img flex-center white-text">
                 <ul class="animated fadeInUp col-md-12">
                     <li>
-                        <p class="flex-item"><?php echo get_field( "promo_caption" );?></p>
-                    </li>
-                    <li>
                         <h1 class="h1-responsive flex-item"><?php the_title()?></h1>
                     </li>
+
+                    <li>
+                        <p class="flex-item"><?php echo get_field( "promo_caption" );?></p>
+                    </li>
+
                     <li>
                         <p class="flex-item"><?php echo get_field('bottom_subtitle');?></p>
                     </li>
